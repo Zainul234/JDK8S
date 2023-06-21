@@ -3,5 +3,9 @@ node {
     {
        git branch: 'main', url: 'https://github.com/Zainul234/CI-CD_assignment1.git'
     }
+     stage('Build') 
+   {
+      sh 'docker build -t my-project .'
+   }
 }
 
