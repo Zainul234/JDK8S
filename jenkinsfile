@@ -9,7 +9,7 @@ node {
    }
    stage('Publihs to Nexus') 
    {
-      sh 'docker login -u admin -p 1234 localhost:8086'
+      sh 'docker login -u admin -p 1234 localhost:8087'
      # sh 'docker tag my-project:1.0 localhost:8086/my-project:1.0'
      # sh 'docker push localhost:8086/my-project:1.0'
    }
