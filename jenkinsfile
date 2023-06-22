@@ -12,6 +12,8 @@ node {
       sh 'docker login -u admin -p 1234 localhost:8087'
       sh 'docker tag my-project:1.0 localhost:8087/my-project:1.0'
       sh 'docker push localhost:8087/my-project:1.0'
+      sh 'kubectl apply -f cicd-deployment.yml'
+      sh 'kubectl get deployment'
    }
 }
 
