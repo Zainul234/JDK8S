@@ -5,11 +5,13 @@ node {
     }
      stage('Build') 
    {
-      sh 'docker build -t my-project .'
+      sh 'docker build -t my-project:1.0 .'
    }
    stage('Publihs to Nexus') 
    {
-      sh 'docker login -u admin -p 1234 172.25.90.1:8085'
+      sh 'docker login -u admin -p 1234 localhost:8086'
+      sh 'docker tag my-project:1.0 localhost:8086/my-project:1.0'
+      sh 'docker push localhost:8086/my-project:1.0'
    }
 }
 
