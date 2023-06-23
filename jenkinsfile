@@ -11,11 +11,12 @@ node {
    {
       sh 'docker login -u admin -p 1234 localhost:8087'
       sh 'docker tag my-project:1.0 localhost:8087/my-project:1.0'
-       sh 'docker push localhost:8087/my-project:1.0'
+      sh 'docker push localhost:8087/my-project:1.0'
   }
    stage('K8s') 
    {
       sh 'kubectl apply -f cicd-deployment.yml'
+       sh 'kubectl apply -f cicd-svc.yml'
       sh 'kubectl get deployment'
       sh 'kubectl get po'
       sh 'kubectl describe po cicd'
