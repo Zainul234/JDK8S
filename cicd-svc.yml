@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: cicd-service
 spec:
-  type: Nodeport
+  type: NodePort
   selector:
     app: cicd
   ports:
