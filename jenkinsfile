@@ -20,7 +20,7 @@ node {
        sh 'kubectl apply -f cicd-svc.yml'
       sh 'kubectl get deployment'
       sh 'kubectl get po'
-      sh 'kubectl describe po cicd'
+      //sh 'kubectl describe po cicd'
    }
 }
 
