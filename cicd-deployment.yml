@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: cicd
-        image: zainulsyed/my-project:1.0
+        image: zainulsyed/my-project:2.0
         ports:
         - containerPort: 80
 
