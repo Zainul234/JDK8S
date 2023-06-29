@@ -4,4 +4,4 @@
 
  EXPOSE 80
  
- CMD ["nginx"]
+ #CMD ["nginx"]
